@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/ejercicio-restaurant/static/css/main.640f114f.css",
+    "main.js": "/ejercicio-restaurant/static/js/main.7b96333e.js",
+    "static/js/787.94e5cc11.chunk.js": "/ejercicio-restaurant/static/js/787.94e5cc11.chunk.js",
+    "static/media/Rottweiler.png": "/ejercicio-restaurant/static/media/Rottweiler.1d132f63898302c3c501.png",
+    "static/media/hamburguesaPortada.png": "/ejercicio-restaurant/static/media/hamburguesaPortada.1d1818700e3bef5a4b7e.png",
+    "static/media/Doberman.png": "/ejercicio-restaurant/static/media/Doberman.a37299252f8cbfa26a06.png",
+    "static/media/Dogo.png": "/ejercicio-restaurant/static/media/Dogo.92511033fd097cfdbc0c.png",
+    "static/media/Bulldog.png": "/ejercicio-restaurant/static/media/Bulldog.6f900e02bcaaa629f8bb.png",
+    "static/media/Labrador.png": "/ejercicio-restaurant/static/media/Labrador.e0768bd4473c74394ad8.png",
+    "static/media/Caniche.png": "/ejercicio-restaurant/static/media/Caniche.e90ee0ded7a547817445.png",
+    "static/media/Cocker.png": "/ejercicio-restaurant/static/media/Cocker.fde1ce596ca803feb43a.png",
+    "static/media/Lechuga.png": "/ejercicio-restaurant/static/media/Lechuga.20eab0e1a79d5b65cbc5.png",
+    "static/media/Carne.png": "/ejercicio-restaurant/static/media/Carne.1d7eea984d94d44c8521.png",
+    "static/media/Panceta.png": "/ejercicio-restaurant/static/media/Panceta.292369f612e7f2639357.png",
+    "static/media/Tomate.png": "/ejercicio-restaurant/static/media/Tomate.90a24bb33f19b46b325e.png",
+    "static/media/Cebolla.png": "/ejercicio-restaurant/static/media/Cebolla.18bfb4276d8d6e0a9a3d.png",
+    "static/media/Papas.png": "/ejercicio-restaurant/static/media/Papas.fd7db472cebe917ca97a.png",
+    "static/media/Queso.png": "/ejercicio-restaurant/static/media/Queso.2687dd0090d045745d09.png",
+    "static/media/Jamon.png": "/ejercicio-restaurant/static/media/Jamon.d4b3f64ebfc22813fca1.png",
+    "static/media/Chiguagua.png": "/ejercicio-restaurant/static/media/Chiguagua.26211344d15cce4c6037.png",
+    "static/media/logoFav.png": "/ejercicio-restaurant/static/media/logoFav.f7e43c4392959a583927.png",
+    "index.html": "/ejercicio-restaurant/index.html",
+    "main.640f114f.css.map": "/ejercicio-restaurant/static/css/main.640f114f.css.map",
+    "main.7b96333e.js.map": "/ejercicio-restaurant/static/js/main.7b96333e.js.map",
+    "787.94e5cc11.chunk.js.map": "/ejercicio-restaurant/static/js/787.94e5cc11.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.640f114f.css",
+    "static/js/main.7b96333e.js"
+  ]
+}
