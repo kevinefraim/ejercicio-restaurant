@@ -1,21 +1,33 @@
+.burger-container {
+  padding: 10px;
+  display: flex;
+  background-color: #000;
+}
 .img-ingrediente {
   width: 30px;
   height: 30px;
 }
-.ingrediente-container li {
+
+.list-ingredient {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-/* .ingrediente-container {
-  width: 100%;
-} */
-/* .btn {
+  flex-direction: column;
   width: 50%;
-} */
-.burger-container {
-  width: 100%;
+}
+.ingr-container li {
+  list-style: none;
+}
+.ingr-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.burger-selected {
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.burger-selected {
+  color: white;
 }

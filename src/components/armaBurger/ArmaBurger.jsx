@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./ArmaBurger.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ArmaBurger = () => {
   const [burgerArmada, setBurgerArmada] = useState(
@@ -14,6 +16,18 @@ const ArmaBurger = () => {
     );
     setIngredientes(response.data);
   };
+
+  //alerta
+  const success = () =>
+    toast.success("Órden agregada!", {
+      position: "top-right",
+      autoClose: 1500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
 
   //peticion api
   useEffect(() => {
@@ -34,42 +48,46 @@ const ArmaBurger = () => {
   const removeIngredient = (id) => {
     setBurgerArmada(burgerArmada.filter((item) => item.id != id));
   };
-  console.log(burgerArmada);
+  console.log(ingredientes);
   return (
     <>
       <div className="burger-container">
         <div className="list-ingredient">
-          <ul>
-            {ingredientes.map((ingr) => (
-              <div key={ingr.id} className="ingrediente-container">
-                <button
-                  disabled={burgerArmada.find((item) => item.id === ingr.id)}
-                  onClick={() => addIngredientes(ingr)}
-                  className="btn btn-outline-success m-0"
-                >
-                  <li>
-                    <p>{ingr.nombre}</p>
-                    <img
-                      src={require(`../../assets/img/ingredientes/${ingr.imagen}.png`)}
-                      alt={ingr.nombre}
-                      className="img-ingrediente"
-                    />
-                  </li>
-                </button>
+          {ingredientes.map((ingr) => (
+            <button
+              key={ingr.id}
+              disabled={burgerArmada.find((item) => item.id === ingr.id)}
+              onClick={() => addIngredientes(ingr)}
+              className="btn btn-outline-warning m-0"
+            >
+              <div className="ingr-container">
+                <p>{ingr.nombre}</p>
+                <img
+                  src={require(`../../assets/img/ingredientes/${ingr.imagen}.png`)}
+                  alt={ingr.nombre}
+                  className="img-ingrediente"
+                />
               </div>
-            ))}
-          </ul>
+            </button>
+          ))}
         </div>
         <div className="burger-selected">
-          <ul className="burger-list ">
-            <h3>Arma tu burger:</h3>
-            <ul>
-              {burgerArmada.map((ingrediente) => (
-                <div
-                  key={ingrediente.id}
-                  className="d-flex justify-content-around my-3"
-                >
-                  <li key={ingrediente.id}>{ingrediente.nombre}</li>
+          <h3>Arma tu burger:</h3>
+          {/* {burgerArmada.length>0 ? 
+            } */}
+          {burgerArmada.map((ingrediente) => (
+            <button
+              key={ingrediente.id}
+              className="btn btn-outline-warning m-1 w-100"
+            >
+              <div className="ingr-container">
+                <p>{ingrediente.nombre}</p>
+                <div className="rigth-container">
+                  <img
+                    src={require(`../../assets/img/ingredientes/${ingrediente.imagen}.png`)}
+                    alt={ingrediente.nombre}
+                    className="img-ingrediente mx-4"
+                  />
                   <button
                     onClick={() => removeIngredient(ingrediente.id)}
                     className="btn btn-danger"
@@ -77,17 +95,41 @@ const ArmaBurger = () => {
                     X
                   </button>
                 </div>
-              ))}
-              <h6>
-                <>
-                  Total:
-                  {burgerArmada
-                    .map((item) => item.precio)
-                    .reduce((prev, curr) => prev + curr, 350)}
-                </>
-              </h6>
-            </ul>
-          </ul>
+              </div>
+            </button>
+          ))}
+          <button className="btn btn-outline-warning m-3 w-100 ">
+            <div className="ingr-container">
+              <p>Carne</p>
+              <img
+                src={require(`../../assets/img/ingredientes/Carne.png`)}
+                alt="carne"
+                className="img-ingrediente"
+              />
+            </div>
+          </button>
+          <h3>
+            <>
+              Total: $
+              {burgerArmada
+                .map((item) => item.precio)
+                .reduce((prev, curr) => prev + curr, 350)}
+            </>
+          </h3>
+          <button onClick={success} className="btn btn-warning mt-4 w-50 p-2 ">
+            Confirmar órden
+          </button>
+          <ToastContainer
+            position="top-right"
+            autoClose={1500}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
         </div>
       </div>
     </>
