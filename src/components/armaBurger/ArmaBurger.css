@@ -1,0 +1,21 @@
+.img-ingrediente {
+  width: 30px;
+  height: 30px;
+}
+.ingrediente-container li {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+/* .ingrediente-container {
+  width: 100%;
+} */
+/* .btn {
+  width: 50%;
+} */
+.burger-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

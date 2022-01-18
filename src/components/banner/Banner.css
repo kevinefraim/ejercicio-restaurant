@@ -1,0 +1,20 @@
+.banner-container {
+  display: flex;
+  align-items: center;
+  height: 500px;
+  background-color: #000;
+}
+
+.banner-container img {
+  height: 500px;
+}
+.titles h1 {
+  font-size: 50px;
+  color: #fff;
+}
+.titles h3 {
+  color: #ddb533;
+}
+.titles {
+  margin: 0 20px;
+}

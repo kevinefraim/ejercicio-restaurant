@@ -1,0 +1,30 @@
+.buscadas-container {
+  width: 100%;
+  background-color: #ddb533;
+  padding: 4px;
+}
+.buscadas-container h2 {
+  text-align: center;
+  margin: 0 0 14px 0;
+  padding: 10px;
+}
+
+.btn-order {
+  font-weight: 600;
+  margin: 0;
+}
+.card-container {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.btn-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-price p {
+  font-weight: 700;
+}
